@@ -1,5 +1,6 @@
 package org.campus02.urldemo;
 
+import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import java.io.*;
 import java.net.Socket;
