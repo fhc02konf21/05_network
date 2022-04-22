@@ -1,11 +1,8 @@
 package org.campus02.urldemo.networking.time;
 
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.time.LocalDateTime;
 
 public class TimeServer {
 
@@ -17,17 +14,11 @@ public class TimeServer {
             // laufe unendlich
             while (clients < 5) {
                 System.out.println("Warte auf Clients...");
-                try(Socket client = serverSocket.accept();
-                    BufferedWriter bw = new BufferedWriter(
-                            new OutputStreamWriter(client.getOutputStream()))) {
-                    System.out.println("Mit dem Client verbunden");
+                try(Socket client = serverSocket.accept()) {
+                    System.out.println("Client hat sich verbunden");
                     clients ++;
-                    System.out.println("clients: " + clients);
-
-                    LocalDateTime now = LocalDateTime.now();
-                    //bw.write(now.toString());
-                    bw.write("current date: " + now);
-                    bw.flush(); // !!!!
+                    TimeHandler timeHandler = new TimeHandler(client);
+                    timeHandler.start();
                 }
             }
         } catch (IOException e) {
