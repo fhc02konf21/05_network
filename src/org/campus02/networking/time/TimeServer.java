@@ -1,4 +1,4 @@
-package org.campus02.urldemo.networking.time;
+package org.campus02.networking.time;
 
 import java.io.IOException;
 import java.net.ServerSocket;

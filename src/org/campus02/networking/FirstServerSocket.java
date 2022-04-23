@@ -1,4 +1,4 @@
-package org.campus02.urldemo.networking;
+package org.campus02.networking;
 
 import java.io.BufferedWriter;
 import java.io.IOException;

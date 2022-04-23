@@ -1,4 +1,4 @@
-package org.campus02.urldemo.networking.pingpong;
+package org.campus02.networking.pingpong;
 
 import java.io.IOException;
 import java.net.ServerSocket;
