@@ -69,7 +69,7 @@ public class ClientHandler implements Runnable {
                         System.out.println(name + " highScore");
                         synchronized (highScore) {
                             for (String n : highScore.keySet()){
-                                bw.write("Score of " + n + " - " + highScore.get(name) + " points");
+                                bw.write("Score of " + n + " - " + highScore.get(n) + " points");
                                 bw.newLine();
                             }
                         }
