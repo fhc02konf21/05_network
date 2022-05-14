@@ -65,6 +65,7 @@ public class ClientHandler implements Runnable {
                         synchronized (highScore) {
                             bw.write("Your score: " + highScore.get(name));
                         }
+                        break;
                     case "highScore":
                         System.out.println(name + " highScore");
                         synchronized (highScore) {
